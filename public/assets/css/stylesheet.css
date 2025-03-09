@@ -1,0 +1,314 @@
+@charset "UTF-8";
+@import url("https://fonts.cdnfonts.com/css/signpainter");
+.section {
+  text-align: center;
+  font-size: 3em;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+/* Make Navbar Stay Above fullPage.js */
+.navbar {
+  background-color: transparent !important;
+  position: absolute; /* So it's above but not fixed */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it’s above fullPage.js */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  width: 50px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  font-weight: bolder;
+  color: #F75940;
+}
+
+.d-flex {
+  width: 100%;
+}
+
+/* Add background on scroll */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+#section0 svg {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.399));
+}
+
+.section h1 {
+  font-size: 3rem; /* Adjust font size for small screens */
+  margin: 0;
+  text-shadow: 0px 0 17px rgba(0, 0, 0, 0.322);
+  text-align: center; /* Center text for mobile */
+  font-family: "SignPainter", sans-serif;
+}
+
+.section h2 {
+  font-size: 6rem; /* Adjust font size for small screens */
+  margin-top: 0;
+  text-shadow: 0px 0 17px rgba(0, 0, 0, 0.322);
+  text-align: center; /* Center text for mobile */
+  font-family: "SignPainter", sans-serif;
+}
+
+.section p {
+  font-size: 1rem; /* Adjust font size for mobile */
+  padding: 0 20px; /* Adjust padding for mobile */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text for mobile */
+}
+
+.learnMore {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 24px; /* Adjust padding for mobile */
+  font-size: 1rem; /* Adjust font size for mobile */
+  border-radius: 7px;
+  display: block; /* Make button take up full width */
+  margin: 10px auto; /* Center button */
+}
+
+.learnMore:hover {
+  background-color: #F75940;
+  color: white;
+  border: 0px;
+  padding: 12px 24px;
+}
+
+.logo-text {
+  fill: #fff;
+  font-family: Righteous-Regular, Righteous;
+  font-size: 148.4px;
+}
+
+.logo-w {
+  letter-spacing: 0em;
+}
+
+body {
+  font-family: arial, helvetica;
+  color: #fff;
+  text-align: center;
+}
+
+/* Backgrounds will cover all the section */
+.section,
+.slide {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Overwriting styles for the navigation dots */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+}
+
+#section0 svg {
+  width: 100%; /* Make the SVG take up full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 300px; /* Optional: Limit the maximum size on smaller screens */
+}
+
+/* Setting the backgrounds */
+#section0 {
+  background-image: url(https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg1.jpg);
+}
+
+#slide1 {
+  background-image: url(/assets/images/IMG_Alberta.jpeg);
+}
+
+#slide2 {
+  background-image: url(/assets/images/IMG_Italy.jpeg);
+}
+
+#slide3 {
+  background-image: url(/assets/images/IMG_Philippines.jpeg);
+}
+
+#slide4 {
+  background-image: url(/assets/images/IMG_Santorini.jpeg);
+}
+
+/* Basic Reset for Form */
+.wanderlog-form {
+  max-width: 600px; /* Set max-width for a standard form width */
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem; /* Padding for spacing */
+}
+
+.wanderlog-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.wanderlog-form .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 0.375rem;
+  border: 1px solid #ccc;
+}
+
+.wanderlog-form .form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.wanderlog-form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  background-color: #ffd000;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.wanderlog-form button:hover {
+  background-color: #F75940;
+}
+
+.is-invalid {
+  border-color: red;
+  background-color: #f8d7da;
+}
+
+.form-group label {
+  font-size: 1.5rem;
+}
+
+form {
+  position: relative;
+  z-index: 10; /* Ensures it appears above the Granim.js canvas */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Pushes it behind other elements */
+}
+
+.slide {
+  padding-top: 150px;
+}
+
+#section2 {
+  padding-top: 270px;
+}
+
+/* Responsive Styling */
+/* Styles for screens larger than 480px (Tablet and Up) */
+@media (min-width: 481px) {
+  .wanderlog-form {
+    padding: 1.25rem;
+  }
+  .wanderlog-form .form-group {
+    margin-bottom: 1rem;
+  }
+  .wanderlog-form .form-control {
+    font-size: 1rem;
+  }
+  .wanderlog-form button {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  #section0 svg {
+    max-width: 60%; /* Increase max-width for larger screens */
+  }
+  .section p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    padding: 0 80px; /* Increase padding for larger screens */
+    text-align: center;
+  }
+  .slide {
+    padding-top: 150px;
+  }
+  #section2 {
+    padding-top: 270px;
+  }
+  #section2 h2 {
+    font-size: 5.5rem;
+    padding-bottom: 0px;
+  }
+  .form-group label {
+    font-size: 1.2rem;
+  }
+}
+/* Styles for screens larger than 768px (Desktop and Up) */
+@media (min-width: 769px) {
+  .wanderlog-form {
+    padding: 1.5rem;
+  }
+  .wanderlog-form .form-control {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .wanderlog-form button {
+    padding: 1rem;
+  }
+  #section0 svg {
+    max-width: 70%; /* You can adjust this value as needed */
+  }
+  .section h1 {
+    font-size: 7rem; /* Adjust for larger screens */
+    text-align: center;
+  }
+  .section p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    padding: 0 80px; /* Increase padding for larger screens */
+    text-align: center;
+  }
+}
+/* For large screens */
+@media (min-width: 991px) {
+  #section0 svg {
+    max-width: 50%; /* Increase max-width for larger screens */
+  }
+  .section h1 {
+    font-size: 12rem; /* Larger font size for desktops */
+    text-align: center;
+  }
+  .section p {
+    font-size: 1.5rem; /* Further increase font size */
+    padding: 20px 300px; /* Large padding for desktop screens */
+    text-align: center;
+  }
+  .learnMore {
+    font-size: 1.5rem; /* Increase button font size for desktop */
+    padding: 12px 24px;
+  }
+  .slide {
+    padding-top: 0px;
+  }
+  #section2 {
+    padding-top: 80px;
+  }
+  #section2 h2 {
+    font-size: 7.5rem;
+  }
+  .form-group label {
+    font-size: 1.7rem;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
